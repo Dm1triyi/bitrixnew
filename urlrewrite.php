@@ -1,11 +1,11 @@
 <?php
 $arUrlRewrite=array (
-  3 => 
+  4 => 
   array (
-    'CONDITION' => '#^/articles/#',
+    'CONDITION' => '#^/vopros-otvet/#',
     'RULE' => '',
-    'ID' => 'bitrix:catalog',
-    'PATH' => '/articles/index.php',
+    'ID' => 'bitrix:support.faq',
+    'PATH' => '/vopros-otvet/index.php',
     'SORT' => 100,
   ),
   1 => 
@@ -14,6 +14,14 @@ $arUrlRewrite=array (
     'RULE' => '',
     'ID' => 'bitrix:catalog',
     'PATH' => '/products/index.php',
+    'SORT' => 100,
+  ),
+  3 => 
+  array (
+    'CONDITION' => '#^/articles/#',
+    'RULE' => '',
+    'ID' => 'bitrix:catalog',
+    'PATH' => '/articles/index.php',
     'SORT' => 100,
   ),
   0 => 
