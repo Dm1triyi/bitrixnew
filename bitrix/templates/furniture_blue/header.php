@@ -9,6 +9,7 @@ IncludeTemplateLangFile(__FILE__);
 <?$APPLICATION->ShowHead();?>
 <link href="<?=SITE_TEMPLATE_PATH?>/common.css" type="text/css" rel="stylesheet" />
 <link href="<?=SITE_TEMPLATE_PATH?>/colors.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
 
 	<!--[if lte IE 6]>
 	<style type="text/css">
@@ -25,7 +26,9 @@ IncludeTemplateLangFile(__FILE__);
 		
 	</style>
 	<![endif]-->
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+	<script src="<?=SITE_TEMPLATE_PATH?>/jquery-1.4.3.min.js"></script>
+	<script src="<?=SITE_TEMPLATE_PATH?>/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
 	<title><?$APPLICATION->ShowTitle()?></title>
 </head>
 <body>

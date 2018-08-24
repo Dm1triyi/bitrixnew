@@ -1,8 +1,6 @@
-<?
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetPageProperty("description", "Форма ввода вопроса");
-$APPLICATION->SetTitle("Title");
-?>
+$APPLICATION->SetTitle("Title");?>
 Text here....
 
 <?$APPLICATION->IncludeComponent(

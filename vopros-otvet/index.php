@@ -26,7 +26,25 @@ $APPLICATION->SetTitle("Вопрос-ответ");
 	)
 );?><br>
 
-<a href="/vopros-otvet/form.php?ajax=Y" style="display:block; width:70px; height:20px; border:solid #0000ff 1px; padding:10px;">Добавить вопрос</a>
+<button class="fancyform" >Добавить вопрос</button>
+<script type="text/javascript">
 
+$('.fancyform').click(function(){    
+   // Function to build the URL edited out for simplicity       
+   // var nzData = '/url.com?Zip=8000 #module';
+
+   $.fancybox({
+        width: 400,
+        height: 400,
+        autoSize: false,
+        href: '../form.php?ajax=Y',
+        type: 'ajax',
+      ajax: { 
+         data:{temp:'text'} 
+        }
+    });
+});
+
+</script>
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
