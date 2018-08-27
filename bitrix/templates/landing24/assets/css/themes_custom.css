@@ -82,6 +82,10 @@ img.u-block-hover__main--zoom-v1 {
 	-webkit-transform: scale(1.00);
 }
 
+.list-inline .landing-block-node-card-list-item .landing-block-node-icon-text p {
+	margin-bottom: 0;
+}
+
 /* Special border for html-block*/
 .g-brd-html-dashed {
 	border: 1px dashed rgba(68, 68, 68, .5);
@@ -101,6 +105,10 @@ img.u-block-hover__main--zoom-v1 {
 
 .g-max-height-50vh {
 	max-height: 70vh !important;
+}
+
+.g-max-height-200 {
+	max-height: 200px;
 }
 
 /*for logo in menu*/
@@ -403,6 +411,10 @@ img.u-block-hover__main--zoom-v1 {
 
 .light-theme .landing-block-node-menu-list .nav-item .nav-link {
 	color: #fff !important;
+}
+
+.light-theme.g-bg-white .landing-block-node-menu-list .nav-item .nav-link {
+	color: #000 !important;
 }
 
 .g-bg-black-opacity-0_7--after .g-bg-primary .landing-block-node-leftblock-subtitle {

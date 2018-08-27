@@ -1,11 +1,11 @@
 <?php
 $arUrlRewrite=array (
-  4 => 
+  0 => 
   array (
-    'CONDITION' => '#^/vopros-otvet/#',
+    'CONDITION' => '#^/services/#',
     'RULE' => '',
-    'ID' => 'bitrix:support.faq',
-    'PATH' => '/vopros-otvet/index.php',
+    'ID' => 'bitrix:catalog',
+    'PATH' => '/services/index.php',
     'SORT' => 100,
   ),
   1 => 
@@ -24,20 +24,20 @@ $arUrlRewrite=array (
     'PATH' => '/articles/index.php',
     'SORT' => 100,
   ),
-  0 => 
-  array (
-    'CONDITION' => '#^/services/#',
-    'RULE' => '',
-    'ID' => 'bitrix:catalog',
-    'PATH' => '/services/index.php',
-    'SORT' => 100,
-  ),
   2 => 
   array (
     'CONDITION' => '#^/news/#',
     'RULE' => '',
     'ID' => 'bitrix:news',
     'PATH' => '/news/index.php',
+    'SORT' => 100,
+  ),
+  4 => 
+  array (
+    'CONDITION' => '#^/#',
+    'RULE' => '',
+    'ID' => 'bitrix:iblock.element.add.form',
+    'PATH' => '/vopros-otvet/form.php',
     'SORT' => 100,
   ),
 );
