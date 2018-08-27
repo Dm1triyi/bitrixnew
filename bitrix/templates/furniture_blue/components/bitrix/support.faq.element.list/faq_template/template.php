@@ -60,6 +60,11 @@ $this->setFrameMode(true);
 		<?endif;?>		
 		</td>
 	</tr>
+	<tr>
+			<td>
+				<a href="/vopros-otvet/form.php" class="faqquestion">Добавить вопрос</a>
+			</td>
+	</tr>
 </table>
 <br/>
 <?endforeach;?>

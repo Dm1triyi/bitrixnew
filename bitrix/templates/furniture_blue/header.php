@@ -29,6 +29,19 @@ IncludeTemplateLangFile(__FILE__);
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
 	<script src="<?=SITE_TEMPLATE_PATH?>/jquery-1.4.3.min.js"></script>
 	<script src="<?=SITE_TEMPLATE_PATH?>/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		$('a.faqquestion').fancybox({
+			'overlayShow': false,
+			'padding': 0,
+			'margin' : 0,
+			'scrolling' : 'no',
+			'titleShow': false,
+			'type': 'ajax',
+			'href': '/vopros-otvet/form.php'
+			});
+	});
+	</script>
 	<title><?$APPLICATION->ShowTitle()?></title>
 </head>
 <body>

@@ -57,4 +57,9 @@ $this->setFrameMode(true);
 			<a href="/vopros-otvet">Вернуться в раздел</a>
 		</td>
 	</tr>
+	<tr>
+			<td>
+				<a href="/vopros-otvet/form.php" class="faqquestion">Добавить вопрос</a>
+			</td>
+	</tr>
 </table>
