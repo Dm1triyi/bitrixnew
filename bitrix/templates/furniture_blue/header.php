@@ -41,6 +41,18 @@ IncludeTemplateLangFile(__FILE__);
 			'href': '/vopros-otvet/form.php'
 			});
 	});
+	$(function() {
+		$('a.recall').fancybox({
+			'overlayShow': false,
+			'padding': 0,
+			'margin' : 0,
+			'scrolling' : 'no',
+			'titleShow': false,
+			'type': 'ajax',
+			'href': '/forms/recall.php'
+			});
+	});
+
 	</script>
 	<title><?$APPLICATION->ShowTitle()?></title>
 </head>
@@ -86,7 +98,11 @@ $APPLICATION->IncludeFile(
 				<a href="<?=SITE_DIR?>search/" class="search-icon" title="<?=GetMessage('CFT_SEARCH')?>"></a>
 				<a href="<?=SITE_DIR?>contacts/" class="feedback-icon" title="<?=GetMessage('CFT_FEEDBACK')?>"></a>
 			</div>
-		
+
+			<div style="float:right;">
+				<a title="Заказать обратный звонок" class="recall" href="/forms/recall.php">Заказать обратный звонок</a>
+			</div>
+
 		</div>
 		
 		<div id="banner">		
