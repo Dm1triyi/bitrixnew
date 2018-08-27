@@ -7,7 +7,7 @@ class MyClass{
         if ($arFields["IBLOCK_ID"] == 6){
             $arSend = array(
                 'TEXT'=>$arFields['AUTHOR'].'написал'.$arFields['NAME']);
-                CEvent::Send('FEEDBACK',SITE_ID,$arSend)
+                CEvent::Send('FAQ_ADD_ELEMENT',s1,$arSend)
         }
     }
 }
