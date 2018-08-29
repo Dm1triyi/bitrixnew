@@ -12,7 +12,7 @@ class MyClass{
     }
     function OnAfterIBlockElementAddHandler2(&$arFields){
         if ($arFields["IBLOCK_ID"] == 6){
-            $arSend = array('TEXT'=>$arFields['PROPERTIES']['AUTHOR'].'написал'.$arFields['NAME']." ".$arFields['PROPERTIES']['TELEPHONE']." ".$arFields['PROPERTIES']['EMAIL']);
+            $arSend = array('TEXT'=>$arFields['NAME'].'написал'.$arFields['PREVIEW_TEXT']." ".$arFields['PROPERTIES']['TELEPHONE']." ".$arFields['PROPERTIES']['EMAIL']);
                 CEvent::Send('RECALL_FORM',s1,$arSend);
         }
     }

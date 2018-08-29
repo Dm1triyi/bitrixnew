@@ -34,7 +34,7 @@ form.main-form
 {
 	position: absolute;
 	top: 46px;
-	width: 638px;
+	/*width: 638px;*/
 	height: 30px;
 	right: 0;
 	
@@ -379,3 +379,6 @@ div.menu-clear-left { clear:left; }
 
 /*Common Elements */
 div.content-form { padding-left:1em; }
+
+/*Form validation*/
+input.inv { border: 2px solid rgb(198, 38, 38); }

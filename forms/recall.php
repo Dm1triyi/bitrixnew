@@ -1,12 +1,16 @@
 <?
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_before.php");?>
+//require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_before.php");
+require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
+$APPLICATION->SetTitle("Свяжитесь с нами");
+
+?>
 <script type="text/javascript" src="/bitrix/js/main/ajax.js"></script>
 
 Text here....
 
 <?$APPLICATION->IncludeComponent(
-	"bitrix:iblock.element.add.form", 
-	".default", 
+	"picom:iblock.element.add.form", 
+	"template2", 
 	array(
 		"SEF_MODE" => "Y",
 		"IBLOCK_TYPE" => "recall",
@@ -17,17 +21,17 @@ Text here....
 		"AJAX_OPTION_STYLE" => "Y",
 		"AJAX_OPTION_HISTORY" => "N",
 		"PROPERTY_CODES" => array(
-			0 => "13",
-			1 => "14",
-			2 => "15",
-			//3 => "PREVIEW_TEXT",
+			0 => "14",
+			1 => "15",
+			2 => "NAME",
+			3 => "PREVIEW_TEXT",
 		),
 		"PROPERTY_CODES_REQUIRED" => array(
-			0 => "13",
-			1 => "14",
+			0 => "14",
+			1 => "NAME",
 		),
 		"GROUPS" => array(
-			0 => "1",
+			0 => "2",
 		),
 		"STATUS_NEW" => "NEW",
 		"STATUS" => "ANY",
@@ -45,19 +49,20 @@ Text here....
 		"MAX_FILE_SIZE" => "0",
 		"PREVIEW_TEXT_USE_HTML_EDITOR" => "Y",
 		"DETAIL_TEXT_USE_HTML_EDITOR" => "Y",
-		"CUSTOM_TITLE_NAME" => "Вопрос",
+		"CUSTOM_TITLE_NAME" => "Имя",
 		"CUSTOM_TITLE_TAGS" => "",
 		"CUSTOM_TITLE_DATE_ACTIVE_FROM" => "",
 		"CUSTOM_TITLE_DATE_ACTIVE_TO" => "",
 		"CUSTOM_TITLE_IBLOCK_SECTION" => "",
-		"CUSTOM_TITLE_PREVIEW_TEXT" => "",
+		"CUSTOM_TITLE_PREVIEW_TEXT" => "Сообщение",
 		"CUSTOM_TITLE_PREVIEW_PICTURE" => "",
 		"CUSTOM_TITLE_DETAIL_TEXT" => "",
 		"CUSTOM_TITLE_DETAIL_PICTURE" => "",
 		"SEF_FOLDER" => "/",
-		"COMPONENT_TEMPLATE" => ".default"
+		"COMPONENT_TEMPLATE" => "template2"
 	),
 	false
 );?>
 
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/epilog_after.php");?>
+<?//require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/epilog_after.php");?>
+<?require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');?>
