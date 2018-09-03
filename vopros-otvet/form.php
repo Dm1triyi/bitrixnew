@@ -1,4 +1,5 @@
 <?
+//require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_before.php");?>
 <script type="text/javascript" src="/bitrix/js/main/ajax.js"></script>
 Text here....
@@ -11,9 +12,9 @@ Text here....
 		"IBLOCK_TYPE" => "faq",
 		"IBLOCK_ID" => "6",
 		"SECTION_ID" => "6",
-		"AJAX_MODE" => "Y",  
-		"AJAX_OPTION_SHADOW" => "N", 
-		"AJAX_OPTION_JUMP" => "N", 
+		"AJAX_MODE" => "Y",
+		"AJAX_OPTION_SHADOW" => "N",
+		"AJAX_OPTION_JUMP" => "N",
 		"AJAX_OPTION_STYLE" => "Y",
 		"AJAX_OPTION_HISTORY" => "N",
 		"PROPERTY_CODES" => array(
@@ -25,7 +26,7 @@ Text here....
 			1 => "NAME",
 		),
 		"GROUPS" => array(
-			0 => "1",
+			0 => "2",
 		),
 		"STATUS_NEW" => "NEW",
 		"STATUS" => "ANY",
@@ -57,5 +58,5 @@ Text here....
 	),
 	false
 );?>
-
+<?//require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');?>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/epilog_after.php");?>
