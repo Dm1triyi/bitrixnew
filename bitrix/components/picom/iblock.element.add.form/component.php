@@ -440,6 +440,8 @@ if ($bAllowAccess)
 		// check required properties
 		foreach ($arParams["PROPERTY_CODES_REQUIRED"] as $key => $propertyID)
 		{
+
+			
 			$bError = false;
 			$propertyValue = intval($propertyID) > 0 ? $arUpdatePropertyValues[$propertyID] : $arUpdateValues[$propertyID];
 

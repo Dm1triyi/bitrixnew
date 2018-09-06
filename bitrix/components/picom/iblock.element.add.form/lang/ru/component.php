@@ -1,5 +1,6 @@
 <?
-$MESS["IBLOCK_ADD_ERROR_REQUIRED"] = "Ошибки при заполнении поля '#PROPERTY_NAME#'!";
+$MESS["IBLOCK_ADD_ERROR_REQUIRED"] = "Ошибки при заполнении поля '#PROPERTY_NAME#'
+!";
 $MESS["IBLOCK_ADD_ELEMENT_NOT_FOUND"] = "Элемент не найден";
 $MESS["IBLOCK_ADD_ACCESS_DENIED"] = "Нет доступа";
 $MESS["IBLOCK_FORM_WRONG_CAPTCHA"] = "Неверно введено слово с картинки";

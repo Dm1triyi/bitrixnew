@@ -6,8 +6,8 @@
 <?
 
     $regExEmail = "/([\s]*)[\._a-zA-Z0-9-]+@[\._a-zA-Z0-9-]+/i";
-    $regExTel = 
-
+    
+    
     $arResult['FORM_VALIDATION']['EMAIL'] = array("1","2"); 
     $arResult['FORM_VALIDATION']['TELEPHONE'] = array();
 ?>

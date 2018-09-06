@@ -1,11 +1,10 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Статьи");
-?>Text here....
-<?$APPLICATION->IncludeComponent(
-	"bitrix:catalog", 
-	".default", 
-	array(
+?><?$APPLICATION->IncludeComponent(
+	"bitrix:catalog",
+	".default",
+	Array(
 		"ACTION_VARIABLE" => "action",
 		"ADD_ELEMENT_CHAIN" => "N",
 		"ADD_PROPERTIES_TO_BASKET" => "Y",
@@ -21,15 +20,13 @@ $APPLICATION->SetTitle("Статьи");
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "A",
 		"COMPATIBLE_MODE" => "Y",
+		"COMPONENT_TEMPLATE" => ".default",
 		"DETAIL_BACKGROUND_IMAGE" => "-",
 		"DETAIL_BROWSER_TITLE" => "-",
 		"DETAIL_CHECK_SECTION_ID_VARIABLE" => "N",
 		"DETAIL_META_DESCRIPTION" => "-",
 		"DETAIL_META_KEYWORDS" => "-",
-		"DETAIL_PROPERTY_CODE" => array(
-			0 => "Author",
-			1 => "",
-		),
+		"DETAIL_PROPERTY_CODE" => array(0=>"Author",1=>"",),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DETAIL_SHOW_PICTURE" => "Y",
 		"DETAIL_STRICT_SECTION_CHECK" => "N",
@@ -51,10 +48,7 @@ $APPLICATION->SetTitle("Статьи");
 		"LIST_BROWSER_TITLE" => "-",
 		"LIST_META_DESCRIPTION" => "-",
 		"LIST_META_KEYWORDS" => "-",
-		"LIST_PROPERTY_CODE" => array(
-			0 => "Author",
-			1 => "",
-		),
+		"LIST_PROPERTY_CODE" => array(0=>"Author",1=>"",),
 		"MESSAGE_404" => "",
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
@@ -65,13 +59,11 @@ $APPLICATION->SetTitle("Статьи");
 		"PAGER_TITLE" => "Товары",
 		"PAGE_ELEMENT_COUNT" => "30",
 		"PARTIAL_PRODUCT_PROPERTIES" => "N",
-		"PRICE_CODE" => array(
-		),
+		"PRICE_CODE" => array(),
 		"PRICE_VAT_INCLUDE" => "Y",
 		"PRICE_VAT_SHOW_VALUE" => "N",
 		"PRODUCT_ID_VARIABLE" => "id",
-		"PRODUCT_PROPERTIES" => array(
-		),
+		"PRODUCT_PROPERTIES" => array(),
 		"PRODUCT_PROPS_VARIABLE" => "prop",
 		"PRODUCT_QUANTITY_VARIABLE" => "quantity",
 		"SECTION_BACKGROUND_IMAGE" => "-",
@@ -81,6 +73,7 @@ $APPLICATION->SetTitle("Статьи");
 		"SECTION_TOP_DEPTH" => "2",
 		"SEF_FOLDER" => "/articles/",
 		"SEF_MODE" => "Y",
+		"SEF_URL_TEMPLATES" => array("sections"=>"","section"=>"#SECTION_CODE#/","element"=>"#SECTION_CODE#/#ELEMENT_CODE#/","compare"=>"compare.php?action=#ACTION_CODE#","smart_filter"=>"#SECTION_ID#/filter/#SMART_FILTER_PATH#/apply/",),
 		"SET_LAST_MODIFIED" => "N",
 		"SET_STATUS_404" => "N",
 		"SET_TITLE" => "Y",
@@ -94,10 +87,7 @@ $APPLICATION->SetTitle("Статьи");
 		"TOP_ELEMENT_SORT_ORDER" => "asc",
 		"TOP_ELEMENT_SORT_ORDER2" => "desc",
 		"TOP_LINE_ELEMENT_COUNT" => "3",
-		"TOP_PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
-		),
+		"TOP_PROPERTY_CODE" => array(0=>"",1=>"",),
 		"USER_CONSENT" => "N",
 		"USER_CONSENT_ID" => "0",
 		"USER_CONSENT_IS_CHECKED" => "Y",
@@ -109,19 +99,6 @@ $APPLICATION->SetTitle("Статьи");
 		"USE_PRICE_COUNT" => "N",
 		"USE_PRODUCT_QUANTITY" => "N",
 		"USE_STORE" => "N",
-		"COMPONENT_TEMPLATE" => ".default",
-		"SEF_URL_TEMPLATES" => array(
-			"sections" => "",
-			"section" => "#SECTION_CODE#/",
-			"element" => "#SECTION_CODE#/#ELEMENT_CODE#/",
-			"compare" => "compare.php?action=#ACTION_CODE#",
-			"smart_filter" => "#SECTION_ID#/filter/#SMART_FILTER_PATH#/apply/",
-		),
-		"VARIABLE_ALIASES" => array(
-			"compare" => array(
-				"ACTION_CODE" => "action",
-			),
-		)
-	),
-	false
+		"VARIABLE_ALIASES" => array("compare"=>array("ACTION_CODE"=>"action",),)
+	)
 );?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

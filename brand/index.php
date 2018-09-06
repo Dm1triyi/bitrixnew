@@ -1,10 +1,10 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Бренды");
-?>Text here....<?$APPLICATION->IncludeComponent(
-	"bitrix:catalog",
-	"",
-	Array(
+?><?$APPLICATION->IncludeComponent(
+	"bitrix:catalog", 
+	".default", 
+	array(
 		"ACTION_VARIABLE" => "action",
 		"ADD_ELEMENT_CHAIN" => "N",
 		"ADD_PROPERTIES_TO_BASKET" => "Y",
@@ -20,12 +20,17 @@ $APPLICATION->SetTitle("Бренды");
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "A",
 		"COMPATIBLE_MODE" => "Y",
+		"COMPONENT_TEMPLATE" => ".default",
 		"DETAIL_BACKGROUND_IMAGE" => "-",
 		"DETAIL_BROWSER_TITLE" => "-",
 		"DETAIL_CHECK_SECTION_ID_VARIABLE" => "N",
 		"DETAIL_META_DESCRIPTION" => "-",
 		"DETAIL_META_KEYWORDS" => "-",
-		"DETAIL_PROPERTY_CODE" => array("",""),
+		"DETAIL_PROPERTY_CODE" => array(
+			0 => "",
+			1 => "brand",
+			2 => "",
+		),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DETAIL_SHOW_PICTURE" => "Y",
 		"DETAIL_STRICT_SECTION_CHECK" => "N",
@@ -40,14 +45,17 @@ $APPLICATION->SetTitle("Бренды");
 		"IBLOCK_TYPE" => "brand",
 		"INCLUDE_SUBSECTIONS" => "Y",
 		"LINE_ELEMENT_COUNT" => "3",
-		"LINK_ELEMENTS_URL" => "link.php?PARENT_ELEMENT_ID=#ELEMENT_ID#",
-		"LINK_IBLOCK_ID" => "",
-		"LINK_IBLOCK_TYPE" => "",
-		"LINK_PROPERTY_SID" => "",
+		"LINK_ELEMENTS_URL" => "#ELEMENT_CODE#/",
+		"LINK_IBLOCK_ID" => "2",
+		"LINK_IBLOCK_TYPE" => "products",
+		"LINK_PROPERTY_SID" => "BRAND",
 		"LIST_BROWSER_TITLE" => "-",
 		"LIST_META_DESCRIPTION" => "-",
 		"LIST_META_KEYWORDS" => "-",
-		"LIST_PROPERTY_CODE" => array("",""),
+		"LIST_PROPERTY_CODE" => array(
+			0 => "",
+			1 => "",
+		),
 		"MESSAGE_404" => "",
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
@@ -58,11 +66,13 @@ $APPLICATION->SetTitle("Бренды");
 		"PAGER_TITLE" => "Товары",
 		"PAGE_ELEMENT_COUNT" => "30",
 		"PARTIAL_PRODUCT_PROPERTIES" => "N",
-		"PRICE_CODE" => array(),
+		"PRICE_CODE" => array(
+		),
 		"PRICE_VAT_INCLUDE" => "Y",
 		"PRICE_VAT_SHOW_VALUE" => "N",
 		"PRODUCT_ID_VARIABLE" => "id",
-		"PRODUCT_PROPERTIES" => array(),
+		"PRODUCT_PROPERTIES" => array(
+		),
 		"PRODUCT_PROPS_VARIABLE" => "prop",
 		"PRODUCT_QUANTITY_VARIABLE" => "quantity",
 		"SECTION_BACKGROUND_IMAGE" => "-",
@@ -70,9 +80,8 @@ $APPLICATION->SetTitle("Бренды");
 		"SECTION_ID_VARIABLE" => "SECTION_ID",
 		"SECTION_SHOW_PARENT_NAME" => "N",
 		"SECTION_TOP_DEPTH" => "2",
-		"SEF_FOLDER" => "/brands/",
+		"SEF_FOLDER" => "/brand/",
 		"SEF_MODE" => "Y",
-		"SEF_URL_TEMPLATES" => Array("compare"=>"compare.php?action=#ACTION_CODE#","element"=>"#SECTION_CODE#/#ELEMENT_CODE#/","section"=>"#SECTION_CODE#/","sections"=>"","smart_filter"=>"#SECTION_ID#/filter/#SMART_FILTER_PATH#/apply/"),
 		"SET_LAST_MODIFIED" => "N",
 		"SET_STATUS_404" => "N",
 		"SET_TITLE" => "Y",
@@ -86,7 +95,10 @@ $APPLICATION->SetTitle("Бренды");
 		"TOP_ELEMENT_SORT_ORDER" => "asc",
 		"TOP_ELEMENT_SORT_ORDER2" => "desc",
 		"TOP_LINE_ELEMENT_COUNT" => "3",
-		"TOP_PROPERTY_CODE" => array("",""),
+		"TOP_PROPERTY_CODE" => array(
+			0 => "",
+			1 => "",
+		),
 		"USER_CONSENT" => "N",
 		"USER_CONSENT_ID" => "0",
 		"USER_CONSENT_IS_CHECKED" => "Y",
@@ -97,6 +109,19 @@ $APPLICATION->SetTitle("Бренды");
 		"USE_MAIN_ELEMENT_SECTION" => "N",
 		"USE_PRICE_COUNT" => "N",
 		"USE_PRODUCT_QUANTITY" => "N",
-		"USE_STORE" => "N"
-	)
+		"USE_STORE" => "N",
+		"SEF_URL_TEMPLATES" => array(
+			"sections" => "",
+			"section" => "",
+			"element" => "#ELEMENT_CODE#/",
+			"compare" => "compare.php?action=#ACTION_CODE#",
+			"smart_filter" => "#SECTION_ID#/filter/#SMART_FILTER_PATH#/apply/",
+		),
+		"VARIABLE_ALIASES" => array(
+			"compare" => array(
+				"ACTION_CODE" => "action",
+			),
+		)
+	),
+	false
 );?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

@@ -1,4 +1,5 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+
 <?$ElementID=$APPLICATION->IncludeComponent(
 	"bitrix:catalog.element",
 	"",
@@ -40,6 +41,78 @@
 	),
 	$component
 );?>
+
+<?$APPLICATION->IncludeComponent("bitrix:catalog.link.list", "template1", array(
+	"AJAX_MODE" => "N",
+		"IBLOCK_TYPE" => "products",
+		"IBLOCK_ID" => "2",
+		"LINK_PROPERTY_SID" => "BRAND",
+		"ELEMENT_ID" => $ElementID,
+		"ELEMENT_SORT_FIELD" => "sort",
+		"ELEMENT_SORT_ORDER" => "asc",
+		"ELEMENT_SORT_FIELD2" => "id",
+		"ELEMENT_SORT_ORDER2" => "desc",
+		"FILTER_NAME" => "arrFilter",
+		"SECTION_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["section"],
+		"DETAIL_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["element"],
+		"BASKET_URL" => $arParams["BASKET_URL"],
+		"ACTION_VARIABLE" => $arParams["ACTION_VARIABLE"],
+		"PRODUCT_ID_VARIABLE" => $arParams["PRODUCT_ID_VARIABLE"],
+		"SECTION_ID_VARIABLE" => $arParams["SECTION_ID_VARIABLE"],
+		"SET_TITLE" => "N",
+		"PAGE_ELEMENT_COUNT" => "30",
+		"PROPERTY_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"PRICE_CODE" => "",
+		"USE_PRICE_COUNT" => "N",
+		"SHOW_PRICE_COUNT" => "1",
+		"PRICE_VAT_INCLUDE" => "Y",
+		"CACHE_TYPE" => "A",
+		"CACHE_TIME" => "300",
+		"CACHE_FILTER" => "Y",
+		"CACHE_GROUPS" => "Y",
+		"DISPLAY_TOP_PAGER" => "N",
+		"DISPLAY_BOTTOM_PAGER" => "Y",
+		"PAGER_TITLE" => "Товары",
+		"PAGER_SHOW_ALWAYS" => "Y",
+		"PAGER_TEMPLATE" => "",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "Y",
+		"HIDE_NOT_AVAILABLE" => "N",
+		"CONVERT_CURRENCY" => "N",
+		"AJAX_OPTION_JUMP" => "Y",
+		"AJAX_OPTION_STYLE" => "Y",
+		"AJAX_OPTION_HISTORY" => "N",
+		"PRODUCT_DISPLAY_MODE" => "N",
+		"TEMPLATE_THEME" => "blue",
+		"SHOW_DISCOUNT_PERCENT" => "N",
+		"SHOW_OLD_PRICE" => "N",
+		"SHOW_CLOSE_POPUP" => "N",
+		"MESS_BTN_BUY" => "Купить",
+		"MESS_BTN_ADD_TO_BASKET" => "В корзину",
+		"MESS_BTN_DETAIL" => "Подробнее",
+		"MESS_NOT_AVAILABLE" => "Нет в наличии",
+		"DISPLAY_COMPARE" => "N",
+		"ADD_PICT_PROP" => "-",
+		"LABEL_PROP" => "-",
+		"SET_LAST_MODIFIED" => "Y",
+		"ADD_TO_BASKET_ACTION" => "ADD",
+		"COMPONENT_TEMPLATE" => "template1",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"COMPATIBLE_MODE" => "Y"
+	),
+	null,
+	array(
+	"ACTIVE_COMPONENT" => "Y"
+	)
+);?>
+
+
+
+
 <?if($arParams["USE_REVIEW"]=="Y" && IsModuleInstalled("forum") && $ElementID):?>
 <br />
 <?$APPLICATION->IncludeComponent(

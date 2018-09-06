@@ -44,7 +44,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Бренды", 
-		"/brands/", 
+		"/brand/", 
 		Array(), 
 		Array(), 
 		"" 

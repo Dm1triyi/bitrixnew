@@ -11,6 +11,20 @@ foreach($arResult["ITEMS"] as $cell=>$arElement):
 	$this->AddEditAction($arElement['ID'], $arElement['EDIT_LINK'], CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "ELEMENT_EDIT"));
 	$this->AddDeleteAction($arElement['ID'], $arElement['DELETE_LINK'], CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CATALOG_ELEMENT_DELETE_CONFIRM')));
 ?>
+
+
+<?
+
+/*получение картинки по ID бренда*/
+
+$res = CIBlockElement::GetByID($arElement["PROPERTIES"]["BRAND"]["VALUE"]);
+if($ar_res = $res->GetNext())
+	$arFile = CFile::GetFileArray($ar_res["PREVIEW_PICTURE"]);?>
+
+<?
+?>
+</pre>
+
 <div class="catalog-item" id="<?=$this->GetEditAreaId($arElement['ID']);?>">
 <?
 	if(is_array($arElement["PREVIEW_PICTURE"])):
@@ -37,8 +51,10 @@ foreach($arResult["ITEMS"] as $cell=>$arElement):
 		<?=$arProperty["NAME"]?>:&nbsp;<?
 			if(is_array($arProperty["DISPLAY_VALUE"]))
 				echo implode("&nbsp;/&nbsp;", $arProperty["DISPLAY_VALUE"]);
-			else
-				echo $arProperty["DISPLAY_VALUE"];?><br />
+			else{
+				echo '<img style="border:1px solid black;" height=50px width=50px src="'.$arFile["SRC"].'" />';
+				echo $arProperty["DISPLAY_VALUE"];}?>				
+				<r />
 <?
 		endif;
 	endforeach;
